@@ -1,7 +1,16 @@
 {% extends "layouts/default.html" %}
 
 {% block content %}
-<div class="content">
+<div id="project_listing" class="content">
 	<h2>Projects</h2>
+
+	<ul id="projects">
+	{% for project in projects %}
+		<li>
+			<h3>{{ project.name }}</h3>
+			{{ project.info }}
+		</li>
+	{% endfor %}
+	</ul>
 </div>
 {% endblock %}
